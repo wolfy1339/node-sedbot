@@ -1,0 +1,11 @@
+{
+  "server":           "irc.freenode.net",
+  "port":             "6667",
+  "nick":             "wolfy-sedbot",
+  "flood_protection": true,
+  "channels":         ["##wolfy1339", "##powder-bots"],
+  "user": {
+    "realname":       "Prototype Bot"
+  },
+  "logdir":           "logs"
+}

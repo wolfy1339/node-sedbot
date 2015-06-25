@@ -1,16 +1,13 @@
-var jerk = require('jerk'),
-    exec = require('child_process').exec,
-    channel = ('SEDBOT_CHANNEL' in process.env)? process.env.SEDBOT_CHANNEL : '#yourchannel',
-    last_said = new Array(),
-    sed_regexp = /^(s[^a-zA-Z0-9].*)$/,
-    sed_binary = process.env.SEDBOT_SEDBIN || 'sed',
-    options = {
-      server: ('SEDBOT_SERVER' in process.env)? process.env.SEDBOT_SERVER : 'chat.freenode.net',
-      nick: ('SEDBOT_NICK' in process.env)? process.env.SEDBOT_NICK : 'sedbot',
-      port: ('SEDBOT_PORT' in process.env)? process.env.SEDBOT_PORT : '6667',
-      flood_protection: true,
-      channels: [channel]
-    };
+var configFile = path.join(__dirname, "settings.json");
+var channel = config.channels
+var exec = require('child_process').exec;
+var fs = require('fs');
+var jerk = require('jerk');
+var last_said = new Array();
+var options = JSON.parse(fs.readFileSync(process.argv[2] || configFile));
+var path = require('path');
+var sed_regexp = /^(s[^a-zA-Z0-9].*)$/;
+var sed_binary = process.env.SEDBOT_SEDBIN || 'sed';
 
 var sed_bot = jerk(function(j) {
   j.watch_for( /^(.+)$/, function(message) {
