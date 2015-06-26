@@ -5,10 +5,10 @@
   "flood_protection": true,
   "channels":         ["##wolfy1339", "##powder-bots"],
   "user": {
-    "realname":       "Prototype Bot",
-    "username":       "",
+    "username":       "wolfy-sedbot",
+    "hostname":       "wolfy1339",
     "servername":     "vps3",
-    "hostname":       "wolfy1339"
+    "realname":       "Prototype Bot"
   },
   "logdir":           "logs"
 }
