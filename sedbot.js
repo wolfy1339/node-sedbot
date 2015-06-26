@@ -1,3 +1,4 @@
+var path = require('path');
 var configFile = path.join(__dirname, "config.json");
 var exec = require('child_process').exec;
 var fs = require('fs');
