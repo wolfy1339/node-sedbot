@@ -1,5 +1,4 @@
-var configFile = path.join(__dirname, "settings.json");
-var channel = config.channels
+var configFile = path.join(__dirname, "config.json");
 var exec = require('child_process').exec;
 var fs = require('fs');
 var jerk = require('jerk');
@@ -8,6 +7,8 @@ var options = JSON.parse(fs.readFileSync(process.argv[2] || configFile));
 var path = require('path');
 var sed_regexp = /^(s[^a-zA-Z0-9].*)$/;
 var sed_binary = process.env.SEDBOT_SEDBIN || 'sed';
+
+var channel = options.channels;
 
 var sed_bot = jerk(function(j) {
   j.watch_for( /^(.+)$/, function(message) {
