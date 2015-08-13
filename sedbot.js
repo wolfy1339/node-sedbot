@@ -1,10 +1,10 @@
-var path = require('path');
+var args = path.join(__dirname, process.argv[2]);
 var configFile = path.join(__dirname, "config.json");
 var exec = require('child_process').exec;
 var fs = require('fs');
 var jerk = require('jerk');
 var last_said = new Array();
-var options = JSON.parse(fs.readFileSync(process.argv[2] || configFile));
+var options = JSON.parse(fs.readFileSync(args || configFile));
 var path = require('path');
 var sed_regexp = /^(s[^a-zA-Z0-9].*)$/;
 var sed_binary = process.env.SEDBOT_SEDBIN || 'sed';

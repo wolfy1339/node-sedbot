@@ -1,14 +1,34 @@
 {
-  "server":           "irc.freenode.net",
-  "port":             "6667",
-  "nick":             "wolfy-sedbot",
-  "flood_protection": true,
-  "channels":         ["##wolfy1339", "##powder-bots"],
-  "user": {
-    "username":       "wolfy-sedbot",
-    "hostname":       "wolfy1339",
-    "servername":     "vps3",
-    "realname":       "Prototype Bot"
-  },
-  "logdir":           "logs"
+    "server":           "irc.freenode.net",
+    "port":             "6667",
+    "nick":             "wolfy-sedbot",
+    "flood_protection": true,
+    "channels":         ["##wolfy1339", "##powder-bots"],
+    "user": {
+        "username":       "wolfy-sedbot",
+        "hostname":       "wolfy1339",
+        "servername":     "vps3",
+        "realname":       "Prototype Bot"
+    },
+    "logdir":           "logs",
+    "irc": {
+        "userName": "topicsed",
+        "password": '................',
+        "realName": 'topicsed bot by Fusl',
+        "port": 6667,
+        "debug": true,
+        "showErrors": false,
+        "autoRejoin": true,
+        "autoConnect": true,
+        "channels": ['##wolfy1339'],
+        "secure": false,
+        "selfSigned": false,
+        "certExpired": false,
+        "floodProtection": true,
+        "floodProtectionDelay": 750,
+        "sasl": true,
+        "stripColors": false,
+        "channelPrefixes": "&#",
+        "messageSplit": 384
+    }
 }
