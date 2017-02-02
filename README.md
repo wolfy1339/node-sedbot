@@ -1,5 +1,7 @@
 # Important Warning
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wolfy1339/node-sedbot.svg)](https://greenkeeper.io/)
+
 There's a chance that **you will get hacked** if you run this this bot.
 
 The bot does **a pretty good job** escaping of single quotes, but
